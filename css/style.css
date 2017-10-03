@@ -1,0 +1,8 @@
+.bookImage {
+    width: 75%;
+    height: auto;
+}
+
+#authorAndBookResultsContainer {
+    display: none!important;
+}
