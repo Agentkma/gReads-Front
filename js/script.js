@@ -27,6 +27,7 @@ function createAllBookResults (bookData) {
     // console.log(bookData);
 
     bookData.forEach((book)=>{
+        let bookId = book.book_id
         let bookTitle = book.book_title;
         let authorNames=book.authors;
         let bookGenre= book.book_genre;
@@ -45,7 +46,7 @@ function createAllBookResults (bookData) {
                 <div class="card mb-3 ">
                     <div class="card-body " id="cardBody">
                         <h4 id="bookTitle" class="card-title ">${bookTitle}</h4>
-                        <h6 id="${bookTitle}" class="card-subtitle "><strong>AUTHOR(S)</strong></h6>
+                        <h6 id="${bookId}" class="card-subtitle "><strong>AUTHOR(S)</strong></h6>
                         <h6 class="card-subtitle "><strong>GENRE  </strong>${bookGenre}</h6>
                         <p class="card-text "><strong>DESCRIPTION  </strong>${bookDescription}</p>
                         <p class="card-text "><small class="text-muted ">Books being added as we speak.</small></p>
@@ -64,7 +65,7 @@ function createAllBookResults (bookData) {
             let firstName = author.first_name;
             let lastName = author.last_name;
             let authorName = `<span>${firstName} ${lastName}<span>    `;
-            $(`#${bookTitle}`).append(authorName);
+            $(`#${bookId}`).append(authorName);
 
         });
 
